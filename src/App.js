@@ -92,13 +92,13 @@ const App = () => {
           {/* Content for the first component */}
           <div className='grid grid-cols-1 gap-5 place-content-center text-center h-full'>
             <div className='text-xm sm:text-sm lg:text-xl'>
-             <strong> Add Count : </strong>  {result.count && result.count.addCount || 0}
+              <strong> Add Count : </strong>  {result.count ? result.count.addCount : 0}
               <br />
-            <strong> Edit Count :</strong>   {result.count && result.count.updateCount || 0}
+              <strong> Edit Count :</strong>   {result.count ? result.count.updateCount : 0}
             </div>
           </div>
         </ResizableAndDraggable>
-        
+
         {/* Second resizable and draggable component */}
         <ResizableAndDraggable
           id={2}
@@ -118,7 +118,7 @@ const App = () => {
             </div>
           </form>
         </ResizableAndDraggable>
-        
+
         {/* Third resizable and draggable component */}
         <ResizableAndDraggable
           id={3}
